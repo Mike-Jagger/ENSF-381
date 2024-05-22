@@ -1,3 +1,36 @@
 body {
-    background-color: aqua;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: antiquewhite;
+    margin: 0;
+}
+
+
+
+.first-section {
+    background-color: green;
+}
+
+
+.second-section {
+    background-color: red;
+}
+
+.third-section {
+    background-color: blue;
+}
+
+
+#footer {
+    background-color: antiquewhite;
+}
+
+#footer p {
+    margin: 0;
 }
