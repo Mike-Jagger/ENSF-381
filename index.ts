@@ -1,27 +1,31 @@
-type phoneName = string;
-type phoneSize = number;
-type phoneBuyDate = number;
+type size = [length: number, width: number];
 
-interface Phone {
-    name: phoneName,
-    size: phoneSize,
-    dateBought: phoneBuyDate
+type tag = [tagName: string, tagSize: size, content?: string, otherDetails?: string[]];
+
+interface div {
+    elements: tag[],
+    divSize: size,
+    flexDirection: string
 }
 
-type AnotherPhone = Phone;
-
-const myPhone: Phone = {
-    name: 'Samsung',
-    size: 20,
-    dateBought: 2020
+interface section {
+    sectionContent: div[],
+    sectionOrder: number,
+    sectionSize: size,
+    contentSpacing: size
 }
 
-console.log(myPhone);
-
-const anotherPhone: AnotherPhone = {
-    name: 'Apple',
-    size: 30,
-    dateBought: 2021
+interface header {
+    headerContent: div[]
 }
 
-console.log(anotherPhone);
+interface footer {
+    footerContent: div[]
+}
+
+
+interface page {
+    pageMainContent: section[],
+    contentSpacing: size,
+    header: header
+}
