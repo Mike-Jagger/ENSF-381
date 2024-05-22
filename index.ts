@@ -1,17 +1,17 @@
-type CarYear = number
-type CarType = string
-type CarModel = string
-type Car = {
-  year: CarYear,
-  type: CarType,
-  model: CarModel
+type phoneName = string;
+type phoneSize = number;
+type phoneBuyDate = number;
+
+interface Phone {
+    name: phoneName,
+    size: phoneSize,
+    dateBought: phoneBuyDate
 }
 
-const carYear: CarYear = 2001
-const carType: CarType = "Toyota"
-const carModel: CarModel = "Corolla"
-const car: Car = {
-  year: carYear,
-  type: carType,
-  model: carModel
-};
+const myPhone: Phone = {
+    name: 'Samsung',
+    size: 20,
+    dateBought: 2020
+}
+
+console.log(myPhone.name);
