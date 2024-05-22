@@ -2,7 +2,7 @@ type size = [length: number, width: number];
 
 type tag = [tagName: string, tagSize: size, content?: string, otherDetails?: string[]];
 
-interface div {
+type div {
     elements: tag[],
     divSize: size,
     flexDirection: string
@@ -10,22 +10,29 @@ interface div {
 
 interface section {
     sectionContent: div[],
-    sectionOrder: number,
+    sectionContentOrder: number[],
+    sectionOrder: number | 1,
     sectionSize: size,
     contentSpacing: size
 }
 
 interface header {
-    headerContent: div[]
+    headerContent: section
 }
 
 interface footer {
-    footerContent: div[]
+    footerContent: section
 }
 
 
-interface page {
+interface body {
     pageMainContent: section[],
     contentSpacing: size,
-    header: header
+    header?: header | null,
+    footer?: footer | null
 }
+
+
+class Body implements body {
+}
+
