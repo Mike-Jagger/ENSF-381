@@ -26,24 +26,34 @@ interface footer {
 
 
 interface body {
-    pageMainContent: section[],
-    contentSpacing?: size | null,
-    header?: header | null,
-    footer?: footer | null
+    getMainContent(): () => section[],
+    setMainContent(): void,
+
+    getContentSpacing: () => size,
+    setContentSpacing: void,
+
+    getHeader: () => header,
+    setHeader: void,
+
+    getFooter: () => footer,
+    setFooter: void
 }
 
 
-class Body implements body {
-    header?: header | null | undefined;
-    footer?: footer | null | undefined;
-    contentSpacing?: size | null | undefined;
-    pageMainContent: section[] = [];
+class Body implements Partial<body> {
+    private pageMainContent: section[];
+    private contentSpacing: size;
 
-    public getPageMainContent(): section[] | null {
+    public constructor(givenContent: section[], givenContentSpacing: size) {
+        this.pageMainContent = givenContent;
+        this.contentSpacing = givenContentSpacing;
+    }
+
+    public getPageMainContent(): section[] {
         return this.pageMainContent;
     }
 
-    public getContentSpacing(): size | null | undefined {
+    public getContentSpacing(): size {
         return this.contentSpacing;
     }
 }
