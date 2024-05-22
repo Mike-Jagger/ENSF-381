@@ -1,16 +1,16 @@
 enum pets {
-    dog,
-    cat,
-    pig,
-    horse,
-    porcupine
+    dog = 'dog',
+    cat = 'cat',
+    pig = 'pig',
+    horse = 'horse',
+    porcupine = 'porcupine'
 }
 
-let gerard: {[index: string]: number} = {};
+let gerard: {[index: string]: string} = {};
 
 gerard.favAnimal = pets.cat;
 
-let yourAnimal: { [index: string]: number} =  {};
+let yourAnimal: { [index: string]: string} =  {};
 
 yourAnimal.yourFavAnimal = pets.pig;
 
