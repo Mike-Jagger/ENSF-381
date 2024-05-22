@@ -1,18 +1,17 @@
-enum pets {
-    dog = 'dog',
-    cat = 'cat',
-    pig = 'pig',
-    horse = 'horse',
-    porcupine = 'porcupine'
+type CarYear = number
+type CarType = string
+type CarModel = string
+type Car = {
+  year: CarYear,
+  type: CarType,
+  model: CarModel
 }
 
-let gerard: {[index: string]: string} = {};
-
-gerard.favAnimal = pets.cat;
-
-let yourAnimal: { [index: string]: string} =  {};
-
-yourAnimal.yourFavAnimal = pets.pig;
-
-
-console.log(gerard, yourAnimal);
+const carYear: CarYear = 2001
+const carType: CarType = "Toyota"
+const carModel: CarModel = "Corolla"
+const car: Car = {
+  year: carYear,
+  type: carType,
+  model: carModel
+};
