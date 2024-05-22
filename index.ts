@@ -1,17 +1,7 @@
-let w: unknown = 1;
+let myArray: {[key: string]: number} = {};
 
-console.log(typeof w);
+myArray['Gerard'] = 2;
 
-w = {
-    letter: "hey",
-    unknownFunction: () => {
-        console.log("I think therefore I am");
-    }
-} as { unknownFunction: () => void }
+console.log(myArray);
 
-console.log(w);
 
-if (w !== null && typeof w === 'object') {
-    console.log((w as { letter: string }).letter);
-    (w as { unknownFunction: Function }).unknownFunction();
-}
