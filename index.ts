@@ -1,7 +1,18 @@
-let myArray: {[key: string]: number} = {};
+enum pets {
+    dog,
+    cat,
+    pig,
+    horse,
+    porcupine
+}
 
-myArray['Gerard'] = 2;
+let gerard: {[index: string]: number} = {};
 
-console.log(myArray);
+gerard.favAnimal = pets.cat;
+
+let yourAnimal: { [index: string]: number} =  {};
+
+yourAnimal.yourFavAnimal = pets.pig;
 
 
+console.log(gerard, yourAnimal);
